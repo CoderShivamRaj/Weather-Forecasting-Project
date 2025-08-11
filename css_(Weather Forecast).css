@@ -1,0 +1,94 @@
+body{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background: linear-gradient(to right, #87cefa, #f0f8ff);
+}
+
+.search-box input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 30%;
+}
+
+.search-box button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: #4296ef;
+    cursor: pointer;
+}
+
+#weather-icon{
+    
+    margin-top: 10px;
+
+}
+
+#box{
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    left: 0;
+    top: 590px;
+    
+    animation: movebox 15s  ease-in-out 0s infinite ;
+}
+
+@keyframes movebox{
+    0% {
+        left: 0;
+        
+    }
+    50% {
+        left: 1150px;
+        
+    }
+    100%{
+        left: 0;
+        
+    }
+}
+
+
+/* Creating class for Animaton...*/
+
+.clouds{
+    background: linear-gradient(to top, #d7d2cc, #304352);
+    background-size: 200% 200%;
+    animation: cloudy 5s ease-in-out infinite;
+}
+.clear{
+    background: linear-gradient(to top, #fceabb, #f8b500);
+    background-size: 200% 200%;
+    animation: clearSky 3s ease-in-out infinite alternate;
+}
+.rain{
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+
+}
+.snow{
+    background: linear-gradient(to top, #e6dada, #274046);
+}
+
+
+@keyframes cloudy{
+    0% { 
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes clearSky{
+     0% { 
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
